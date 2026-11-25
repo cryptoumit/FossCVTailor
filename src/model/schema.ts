@@ -1,0 +1,21 @@
+import { z } from 'zod';
+
+const id = z.string().min(1);
+export const AchievementSchema = z.object({ id, text: z.string(), selected: z.boolean().default(true) });
+export const ExperienceSchema = z.object({ id, employer: z.string().default(''), title: z.string().default(''), location: z.string().default(''), start: z.string().default(''), end: z.string().default(''), current: z.boolean().default(false), description: z.string().default(''), achievements: z.array(AchievementSchema).default([]) });
+export const EducationSchema = z.object({ id, institution: z.string().default(''), degree: z.string().default(''), field: z.string().default(''), start: z.string().default(''), end: z.string().default(''), detail: z.string().default('') });
+export const SkillSchema = z.object({ id, name: z.string(), category: z.string().default('') });
+export const ProfileSchema = z.object({ id, name: z.string().default(''), title: z.string().default(''), email: z.string().default(''), phone: z.string().default(''), location: z.string().default(''), website: z.string().default(''), linkedin: z.string().default(''), summary: z.string().default(''), experience: z.array(ExperienceSchema).default([]), education: z.array(EducationSchema).default([]), skills: z.array(SkillSchema).default([]), languages: z.array(z.string()).default([]) });
+export const CvVersionSchema = z.object({ id, name: z.string(), templateId: z.string(), profile: ProfileSchema, updatedAt: z.string() });
+export const LetterSchema = z.object({ id, name: z.string(), company: z.string().default(''), role: z.string().default(''), body: z.string().default(''), updatedAt: z.string() });
+export const ApplicationSchema = z.object({ id, company: z.string().default(''), role: z.string().default(''), status: z.enum(['Interested','Preparing','Applied','Screening','Interview','Final interview','Offer','Accepted','Rejected','Withdrawn']), date: z.string().default(''), url: z.string().default(''), notes: z.string().default(''), jobDescription: z.string().default('') });
+export const AppDataSchema = z.object({ schemaVersion: z.literal(1), profile: ProfileSchema, cvs: z.array(CvVersionSchema), letters: z.array(LetterSchema), applications: z.array(ApplicationSchema), favorites: z.array(z.string()), theme: z.enum(['light','dark']) });
+export type Profile = z.infer<typeof ProfileSchema>;
+export type Experience = z.infer<typeof ExperienceSchema>;
+export type CvVersion = z.infer<typeof CvVersionSchema>;
+export type Letter = z.infer<typeof LetterSchema>;
+export type Application = z.infer<typeof ApplicationSchema>;
+export type AppData = z.infer<typeof AppDataSchema>;
+export const makeId = () => crypto.randomUUID();
+export const emptyProfile = (): Profile => ({ id: makeId(), name:'', title:'', email:'', phone:'', location:'', website:'', linkedin:'', summary:'', experience:[], education:[], skills:[], languages:[] });
+export const initialData = (): AppData => ({ schemaVersion:1, profile:emptyProfile(), cvs:[], letters:[], applications:[], favorites:[], theme:'light' });
