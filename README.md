@@ -27,5 +27,6 @@ File import parsing, AI-assisted drafting, advanced pagination and richer tracke
 - `npm run dev` starts the Vite development server.
 - `npm run build` type-checks and creates a production bundle.
 - `npm test` runs unit tests.
+- See [AGENTS.md](./AGENTS.md) for repository guidance and architecture boundaries.
 
 All user content stays in this browser by default. Clearing browser storage removes local content, so export a JSON backup regularly. AI is not currently connected and no data is sent externally.
