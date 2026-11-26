@@ -4,6 +4,7 @@ import { templates } from './templates';
 
 describe('workspace data',()=>{
  it('creates a valid empty local workspace',()=>{expect(AppDataSchema.parse(initialData()).schemaVersion).toBe(1)});
+ it('uses dark mode for new workspaces by default',()=>{expect(initialData().theme).toBe('dark')});
  it('uses stable unique ids for independent records',()=>{expect(makeId()).not.toBe(makeId())});
  it('accepts a profile with reusable achievements and validates status',()=>{
   const profile=emptyProfile(); profile.experience.push({id:makeId(),employer:'Studio',title:'Designer',location:'',start:'2022',end:'',current:true,description:'',achievements:[{id:makeId(),text:'Improved onboarding',selected:true}]});

@@ -23,4 +23,4 @@ export type Application = z.infer<typeof ApplicationSchema>;
 export type AppData = z.infer<typeof AppDataSchema>;
 export const makeId = () => crypto.randomUUID();
 export const emptyProfile = (): Profile => ({ id: makeId(), name:'', title:'', email:'', phone:'', location:'', website:'', linkedin:'', summary:'', experience:[], education:[], skills:[], languages:[], certifications:[], projects:[], publications:[], awards:[], customSections:[] });
-export const initialData = (): AppData => ({ schemaVersion:1, profile:emptyProfile(), cvs:[], letters:[], applications:[], favorites:[], theme:'light' });
+export const initialData = (): AppData => ({ schemaVersion:1, profile:emptyProfile(), cvs:[], letters:[], applications:[], favorites:[], theme:'dark' });

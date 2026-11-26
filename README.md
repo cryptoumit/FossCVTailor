@@ -18,7 +18,7 @@ Install Node.js 20+ and npm, then run `npm install`, `npm run dev`. Use `npm run
 - Editable DOCX export for CVs and cover letter drafts.
 - 50 distinct declarative template definitions across eight categories, with search and ATS classifications.
 - Cover letter drafting, application tracking, and JSON backup/restore.
-- Responsive, keyboard-friendly interface and light/dark workspace themes.
+- Responsive, keyboard-friendly interface with dark mode by default and a light/dark workspace toggle.
 
 File import parsing, AI-assisted drafting, advanced pagination and richer tracker workflows are planned; these are not presented as complete features. PDF uses the browser's print dialog to preserve selectable document text; rendering can vary by browser.
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## Theme defaults
+- Set dark mode as the default for new workspaces and replaced the top-right letter avatar with a moon/sun theme toggle.
+
 ## Master profile sections
 - Added structured certifications, projects, publications, awards, and custom sections.
 - Included these sections in the live CV document and editable DOCX export.
