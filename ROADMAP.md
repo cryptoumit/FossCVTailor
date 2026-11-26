@@ -6,6 +6,7 @@
 
 ## Phase 1 — Foundation (in progress)
 - [x] React + TypeScript + Vite application shell and design system.
+- [x] GitHub Pages base path and Actions deployment workflow.
 - [x] Validated data model and IndexedDB autosave repository.
 - [x] Portable JSON export/import and local data reset.
 - [ ] Add migration and broader validation tests.
