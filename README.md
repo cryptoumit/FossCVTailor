@@ -2,6 +2,10 @@
 
 A free, local-first workspace for building CVs, cover letters, and a job search pipeline. No account, subscription, analytics, or remote service is required.
 
+## View online
+
+FossCVTailor is available on [GitHub Pages](https://cryptoumit.github.io/FossCVTailor/).
+
 ## Run locally
 
 Install Node.js 20+ and npm, then run `npm install`, `npm run dev`. Use `npm run build` for a production build and `npm test` for the unit suite.
