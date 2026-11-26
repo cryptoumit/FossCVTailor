@@ -29,7 +29,8 @@
 
 ## Phase 5–6 — Template library
 - [x] 50 template configurations across the requested eight categories.
-- [ ] Review every template/profile pairing visually and refine templates based on renders.
+- [x] Render all 50 configurations against one populated representative profile and fix the single-column width issue found in that pass.
+- [ ] Review the broader template/profile combinations visually and refine templates based on those renders.
 
 ## Phase 7 — Job tailoring
 - [x] Application records and job description capture.

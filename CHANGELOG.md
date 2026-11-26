@@ -22,6 +22,10 @@
 
 # Changelog
 
+## Template visual review
+- Reviewed all 50 template configurations against a populated sample CV and corrected single-column and editorial layouts that were leaving a narrow unused column.
+- Broader profile-combination review remains in progress.
+
 ## GitHub issue templates
 - Added structured bug report and feature request forms with reminders not to post private CV or workspace data.
 

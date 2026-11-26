@@ -24,3 +24,6 @@ Certifications, projects, publications, awards, and custom sections are optional
 
 ## Additive CV editor settings
 CV versions now store section order and visibility, optional design overrides, page size, and named snapshots. These fields are additive and default when missing, so existing schema-version-1 workspaces and backups remain valid without a format migration. Undo/redo history is session-local and is not included in backups.
+
+## Template column behavior
+Single-column and editorial templates use the full document width. Templates that place profile details in a side rail reserve a second column. Keep these layout rules in the shared document renderer so all templates continue to use the same content structure.

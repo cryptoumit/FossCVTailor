@@ -17,6 +17,7 @@ Install Node.js 20+ and npm, then run `npm install`, `npm run dev`. Use `npm run
 - Multiple CV versions, template selection, preview, and browser print-to-PDF.
 - Editable DOCX export for CVs and cover letter drafts.
 - 50 distinct declarative template definitions across eight categories, with search and ATS classifications.
+- Single-column and editorial CV layouts use the full page width; side-rail layouts reserve a separate details column.
 - Cover letter drafting, application tracking, and JSON backup/restore.
 - Responsive, keyboard-friendly interface with dark mode by default and a light/dark workspace toggle.
 

@@ -64,3 +64,7 @@
 .paper.page-a4.head-band.density-spacious .cv-header{margin:-15mm -15mm 0;padding:11mm 15mm 20px}
 .paper.page-letter.head-band.density-compact .cv-header{margin:-.4in -.4in 0;padding:.3in .4in 14px}
 .paper.page-letter.head-band.density-spacious .cv-header{margin:-.8in -.8in 0;padding:.6in .8in 20px}
+
+/* Single-column templates use the full document width instead of reserving a sidebar rail. */
+.paper.cv-single .cv-body,.paper.cv-editorial .cv-body{grid-template-columns:minmax(0,1fr)}
+@media(max-width:480px){.paper.cv-single .cv-body,.paper.cv-editorial .cv-body{grid-template-columns:minmax(0,1fr)}}
