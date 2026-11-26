@@ -17,6 +17,8 @@
 
 ## Phase 3 — CV editor (in progress)
 - [x] Multiple CV versions, template selection, live document preview, print export.
+- [x] Edit the selected CV version from the profile editor, with autosave, stable achievement state, and comma-friendly list fields.
+- [x] Import a validated JSON backup directly from the profile editor.
 - [ ] Section visibility/order, version snapshots, undo/redo, design controls.
 
 ## Phase 4 — Document engine
@@ -42,6 +44,7 @@
 
 ## Phase 10 — QA and polish
 - [x] Responsive layout and basic data-model tests.
+- [x] Improve workspace helper text size and dark-theme contrast.
 - [ ] E2E coverage, import parsers, 600 visual/profile combinations, accessibility audit, browser-based export tests.
 
 ## Risks / limits

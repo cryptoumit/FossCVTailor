@@ -34,3 +34,7 @@ File import parsing, AI-assisted drafting, advanced pagination and richer tracke
 - See [AGENTS.md](./AGENTS.md) for repository guidance and architecture boundaries.
 
 All user content stays in this browser by default. Clearing browser storage removes local content, so export a JSON backup regularly. AI is not currently connected and no data is sent externally.
+
+
+### Editing and imports
+The profile editor edits the selected CV version when one is active, and changes autosave locally. Use **Back to CV** to return to its preview. Skills and languages accept comma-separated input. A validated FossCVTailor JSON backup can also be imported from the profile editor; restoring replaces the current local workspace after confirmation.
