@@ -31,3 +31,36 @@
 @media(max-width:760px){.cv-editor-controls{grid-template-columns:1fr}.cv-editor-controls>.editor-control-card:last-child{grid-column:auto}}
 
 .cv-sidebar .cv-body>.cv-side-section{padding:10px;background:#f4f6f3}.theme-dark .section-order-list li{border-color:var(--line)}
+
+/* Physical page geometry and screen zoom for the document preview. */
+.preview-area{overflow-x:auto}
+.preview-actions{display:flex;align-items:center;gap:8px}
+.page-size-control{display:flex;align-items:center;gap:6px;color:var(--ui-muted);font-size:12px}
+.page-size-control select{height:32px;padding:3px 7px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink)}
+.zoom-controls{display:flex;align-items:center;border:1px solid var(--line);border-radius:5px;background:var(--paper)}
+.zoom-controls .icon-button{width:28px;height:30px}
+.zoom-controls button:disabled{opacity:.35;cursor:default}
+.zoom-label{min-width:44px;border:0;background:transparent;color:var(--ink);font-size:12px}
+.document-preview{width:calc(var(--preview-width) * var(--preview-scale));height:var(--preview-content-height);margin:0 auto}
+.paper.page-a4{page:cv-a4;width:210mm;min-height:297mm;padding:18mm 19mm;margin:0;transform:scale(var(--preview-scale));transform-origin:top left}
+.paper.page-letter{page:cv-letter;width:8.5in;min-height:11in;padding:.7in .75in;margin:0;transform:scale(var(--preview-scale));transform-origin:top left}
+.paper.page-a4.head-band .cv-header{margin:-18mm -19mm 0;padding:14mm 19mm 18px}
+.paper.page-letter.head-band .cv-header{margin:-.7in -.75in 0;padding:.55in .75in 18px}
+@media print{
+ .document-preview{width:auto!important;height:auto!important;margin:0!important;overflow:visible!important}
+ .paper.page-a4{transform:none!important;width:210mm;min-height:297mm;margin:0;padding:18mm 19mm}
+ .paper.page-letter{transform:none!important;width:8.5in;min-height:11in;margin:0;padding:.7in .75in}
+ .paper.page-a4.head-band .cv-header{margin:-18mm -19mm 0;padding:14mm 19mm 18px}
+ .paper.page-letter.head-band .cv-header{margin:-.7in -.75in 0;padding:.55in .75in 18px}
+ @page cv-a4{size:A4 portrait;margin:0}
+ @page cv-letter{size:letter portrait;margin:0}
+}
+@media(max-width:760px){.preview-toolbar{align-items:flex-start;gap:8px}.preview-actions{flex-wrap:wrap;justify-content:flex-end}.page-size-control{font-size:11px}}
+.paper.page-a4.density-compact{padding:10mm 10mm}
+.paper.page-a4.density-spacious{padding:15mm}
+.paper.page-letter.density-compact{padding:.4in}
+.paper.page-letter.density-spacious{padding:.8in}
+.paper.page-a4.head-band.density-compact .cv-header{margin:-10mm -10mm 0;padding:8mm 10mm 14px}
+.paper.page-a4.head-band.density-spacious .cv-header{margin:-15mm -15mm 0;padding:11mm 15mm 20px}
+.paper.page-letter.head-band.density-compact .cv-header{margin:-.4in -.4in 0;padding:.3in .4in 14px}
+.paper.page-letter.head-band.density-spacious .cv-header{margin:-.8in -.8in 0;padding:.6in .8in 20px}

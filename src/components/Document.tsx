@@ -1,5 +1,7 @@
+import { useEffect, useRef, useState } from 'react';
 import type { ReactNode, CSSProperties } from 'react';
 import type { Profile } from '../model/schema';
+import type { CvPageSize } from '../model/schema';
 import type { Template } from '../model/templates';
 import { cvSectionIds, type CvSectionId } from '../model/cvSections';
 
@@ -8,12 +10,28 @@ export function Document({
   template,
   sectionOrder = [...cvSectionIds],
   hiddenSections = [],
+  pageSize = 'A4',
+  zoom = 75,
 }: {
   profile: Profile;
   template: Template;
   sectionOrder?: CvSectionId[];
   hiddenSections?: CvSectionId[];
+  pageSize?: CvPageSize;
+  zoom?: number;
 }) {
+  const documentRef = useRef<HTMLElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+  useEffect(() => {
+    const element = documentRef.current;
+    if (!element) return;
+    const measure = () => setContentHeight(element.scrollHeight);
+    measure();
+    if (typeof ResizeObserver === 'undefined') return;
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [profile, template, pageSize]);
   const ordered = [...sectionOrder, ...cvSectionIds.filter(id => !sectionOrder.includes(id))];
   const renderSection = (id: CvSectionId): ReactNode => {
     switch (id) {
@@ -40,8 +58,10 @@ export function Document({
     }
   };
 
-  return <article className={`paper cv-${template.layout} font-${template.font} density-${template.density} head-${template.header}`} style={{ '--accent': template.accent } as CSSProperties}>
+  return <div className="document-preview" style={{ '--preview-scale': zoom / 100, '--preview-width': pageSize === 'A4' ? '210mm' : '8.5in', '--preview-content-height': `${Math.max(contentHeight, pageSize === 'A4' ? 1123 : 1056) * zoom / 100}px` } as CSSProperties}>
+    <article ref={documentRef} className={`paper page-${pageSize.toLowerCase()} cv-${template.layout} font-${template.font} density-${template.density} head-${template.header}`} style={{ '--accent': template.accent } as CSSProperties}>
     <header className="cv-header"><div><h1>{profile.name || 'Your name'}</h1><p className="cv-title">{profile.title || 'Professional title'}</p></div><div className="cv-contact">{[profile.email, profile.phone, profile.location, profile.website, profile.linkedin].filter(Boolean).map(value => <span key={value}>{value}</span>)}</div></header>
     <div className="cv-body">{ordered.filter(id => !hiddenSections.includes(id)).map(id => renderSection(id))}</div>
-  </article>;
+    </article>
+  </div>;
 }

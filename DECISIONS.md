@@ -13,7 +13,7 @@ Validate both persisted records and backup files at boundaries. Do not trust imp
 Templates share a single structured document renderer, but each configuration defines a genuinely different header, layout, hierarchy, density, typography, and accent. ATS classification is descriptive, not a universal compatibility promise.
 
 ## Browser print for PDF in the first iteration
-Print keeps text selectable and avoids screenshot rasterization or a server-side PDF service. Browser pagination and appearance vary; automated print QA remains a required later phase.
+Print keeps text selectable and avoids screenshot rasterization or a server-side PDF service. Browser pagination and appearance vary; the automated Chromium check covers page dimensions and a representative long CV, with full template/profile visual review tracked separately.
 
 ## No default AI provider
 The app has no AI dependency and sends no CV data out of the browser. Any future provider must have explicit user consent and must return suggestions that are reviewed before applying.
@@ -23,4 +23,4 @@ Certifications, projects, publications, awards, and custom sections are optional
 
 
 ## Additive CV editor settings
-CV versions now store section order and visibility, optional design overrides, and named snapshots. These fields are additive and default when missing, so existing schema-version-1 workspaces and backups remain valid without a format migration. Undo/redo history is session-local and is not included in backups.
+CV versions now store section order and visibility, optional design overrides, page size, and named snapshots. These fields are additive and default when missing, so existing schema-version-1 workspaces and backups remain valid without a format migration. Undo/redo history is session-local and is not included in backups.

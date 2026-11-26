@@ -20,7 +20,7 @@ Install Node.js 20+ and npm, then run `npm install`, `npm run dev`. Use `npm run
 - Cover letter drafting, application tracking, and JSON backup/restore.
 - Responsive, keyboard-friendly interface with dark mode by default and a light/dark workspace toggle.
 
-File import parsing, AI-assisted drafting, advanced pagination and richer tracker workflows are planned; these are not presented as complete features. PDF uses the browser's print dialog to preserve selectable document text; rendering can vary by browser.
+PDF/DOCX file parsing, AI-assisted drafting, manual page-break controls, and richer tracker workflows are planned; these are not presented as complete features. PDF uses the browser's print dialog to preserve selectable document text; rendering can vary by browser.
 
 ## Architecture
 
@@ -40,3 +40,5 @@ All user content stays in this browser by default. Clearing browser storage remo
 The profile editor edits the selected CV version when one is active, and changes autosave locally. Use **Back to CV** to return to its preview. Skills and languages accept comma-separated input. A validated FossCVTailor JSON backup can also be imported from the profile editor; restoring replaces the current local workspace after confirmation.
 
 CV versions can customize section visibility and order, accent color, typeface, and spacing. Named snapshots save and restore a version’s profile and document settings. Undo and redo are available for edits during the current session.
+
+The CV preview supports A4 and US Letter page sizes and adjustable zoom. To run the browser-based preview and pagination checks, install Chromium with `npm run test:render:install`, then run `npm run test:render`.

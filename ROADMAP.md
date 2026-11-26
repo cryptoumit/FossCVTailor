@@ -21,10 +21,11 @@
 - [x] Import a validated JSON backup directly from the profile editor.
 - [x] Per-version section visibility and ordering, named snapshots, session undo/redo, and design controls.
 
-## Phase 4 — Document engine (next)
+## Phase 4 — Document engine (complete)
 - [x] Print stylesheet, A4/Letter page sizing and selectable text.
 - [x] Editable DOCX generation for CVs and letters.
-- [ ] Page-level preview controls, rendering automation and pagination QA.
+- [x] Page-size and zoom controls with matching PDF and DOCX page dimensions.
+- [x] Automated Chromium preview and multipage print checks.
 
 ## Phase 5–6 — Template library
 - [x] 50 template configurations across the requested eight categories.
@@ -48,6 +49,6 @@
 - [ ] E2E coverage, import parsers, 600 visual/profile combinations, accessibility audit, browser-based export tests.
 
 ## Risks / limits
-- Print-to-PDF depends on browser print behavior and fonts; browser-based visual and export verification remains pending.
-- PDF pagination fidelity requires browser-based regression work; DOCX styling is currently a semantic, single-column document and does not mirror every template layout.
+- Print-to-PDF depends on browser print behavior and fonts; the browser suite checks page sizing and a long multipage CV, while full visual review across all templates remains pending.
+- Pagination can still vary across browsers and fonts; DOCX styling is a semantic, single-column document and does not mirror every template layout.
 - Job matching is intentionally not represented as AI; external AI must be opt-in with a review-before-send flow.

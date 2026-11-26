@@ -8,7 +8,7 @@ const tidy = (text: string) => text.trim();
 export async function exportCvDocx(
   profile: Profile,
   template: Template,
-  options: { sectionOrder?: CvSectionId[]; hiddenSections?: CvSectionId[] } = {},
+  options: { sectionOrder?: CvSectionId[]; hiddenSections?: CvSectionId[]; pageSize?: 'A4'|'Letter' } = {},
 ) {
   const children: Paragraph[] = [];
   const font = template.font === 'serif' ? 'Georgia' : template.font === 'mono' ? 'Courier New' : 'Arial';
@@ -100,7 +100,7 @@ export async function exportCvDocx(
   );
   const word = new WordDocument({
     styles: { default: { document: { run: { font, size: template.density === 'compact' ? 18 : template.density === 'spacious' ? 22 : 20 } } } },
-    sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1020, right: 1020, bottom: 1020, left: 1020 } } }, children }],
+    sections: [{ properties: { page: { size: options.pageSize === 'Letter' ? { width: 12240, height: 15840 } : { width: 11906, height: 16838 }, margin: { top: 1020, right: 1020, bottom: 1020, left: 1020 } } }, children }],
   });
   const blob = await Packer.toBlob(word);
   saveBlob(blob, `${safeName(profile.name || 'cv')}-${safeName(template.name)}.docx`);

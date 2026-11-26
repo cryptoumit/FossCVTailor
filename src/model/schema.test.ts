@@ -5,6 +5,12 @@ import { templates } from './templates';
 describe('workspace data',()=>{
  it('creates a valid empty local workspace',()=>{expect(AppDataSchema.parse(initialData()).schemaVersion).toBe(1)});
  it('uses dark mode for new workspaces by default',()=>{expect(initialData().theme).toBe('dark')});
+ it('defaults additive CV page settings when reading older workspace records',()=>{
+  const data={...initialData(),cvs:[{id:makeId(),name:'Older CV',templateId:'cv-00',profile:emptyProfile(),updatedAt:new Date().toISOString()}]};
+  const parsed=AppDataSchema.parse(data);
+  expect(parsed.cvs[0].pageSize).toBe('A4');
+  expect(parsed.cvs[0].snapshots).toEqual([]);
+ });
  it('uses stable unique ids for independent records',()=>{expect(makeId()).not.toBe(makeId())});
  it('accepts a profile with reusable achievements and validates status',()=>{
   const profile=emptyProfile(); profile.experience.push({id:makeId(),employer:'Studio',title:'Designer',location:'',start:'2022',end:'',current:true,description:'',achievements:[{id:makeId(),text:'Improved onboarding',selected:true}]});

@@ -3,6 +3,11 @@
 - Added named profile/template/section snapshots and session-local undo/redo for CV edits.
 - Added per-version accent color, font, and spacing controls.
 
+## Document preview and pagination
+- Added persisted A4 and US Letter page-size controls plus adjustable preview zoom.
+- Kept print/PDF and DOCX exports aligned with the selected page size.
+- Added Playwright Chromium checks for preview scale and multipage print output.
+
 ## Readable workspace typography
 - Applied the readable UI type scale and muted-text contrast to the rest of the workspace (navigation, headings, CV builder side panel, templates, applications tracker, inputs and footer); CV document and print typography are unchanged.
 
