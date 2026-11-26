@@ -10,6 +10,26 @@ describe('workspace data',()=>{
   expect(AppDataSchema.parse({...initialData(),profile}).profile.experience[0].achievements).toHaveLength(1);
   expect(AppDataSchema.safeParse({...initialData(),applications:[{id:makeId(),status:'Maybe'}]}).success).toBe(false);
  });
+ it('fills added profile sections with empty collections for existing version-one data',()=>{
+  const parsed=AppDataSchema.parse({...initialData(),profile:{id:makeId()}});
+  expect(parsed.schemaVersion).toBe(1);
+  expect(parsed.profile.certifications).toEqual([]);
+  expect(parsed.profile.projects).toEqual([]);
+  expect(parsed.profile.publications).toEqual([]);
+  expect(parsed.profile.awards).toEqual([]);
+  expect(parsed.profile.customSections).toEqual([]);
+ });
+ it('validates structured additional profile entries',()=>{
+  const profile=emptyProfile();
+  profile.certifications.push({id:makeId(),name:'Cloud Certificate',issuer:'Example Institute',date:'2025',url:'https://example.com/cert'});
+  profile.projects.push({id:makeId(),name:'Open data tool',role:'Maintainer',start:'2024',end:'2025',description:'Built a public data browser.',url:'https://example.com/project'});
+  profile.publications.push({id:makeId(),title:'Systems study',publisher:'Example Journal',date:'2025',url:'',description:''});
+  profile.awards.push({id:makeId(),name:'Design Award',issuer:'Example Guild',date:'2024',description:''});
+  profile.customSections.push({id:makeId(),title:'Volunteering',content:'Mentored early-career designers.'});
+  const parsed=AppDataSchema.parse({...initialData(),profile});
+  expect(parsed.profile.certifications[0].name).toBe('Cloud Certificate');
+  expect(parsed.profile.customSections[0].title).toBe('Volunteering');
+ });
 });
 describe('template catalog',()=>{
  it('contains 50 uniquely identified designs in the requested category counts',()=>{

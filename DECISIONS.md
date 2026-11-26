@@ -17,3 +17,6 @@ Print keeps text selectable and avoids screenshot rasterization or a server-side
 
 ## No default AI provider
 The app has no AI dependency and sends no CV data out of the browser. Any future provider must have explicit user consent and must return suggestions that are reviewed before applying.
+
+## Additive profile sections
+Certifications, projects, publications, awards, and custom sections are optional arrays with empty defaults. Existing schema-version-1 profile records remain valid without a data migration. Add migration logic only if a future incompatible data-format change requires it.

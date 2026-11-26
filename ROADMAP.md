@@ -9,11 +9,11 @@
 - [x] GitHub Pages base path and Actions deployment workflow.
 - [x] Validated data model and IndexedDB autosave repository.
 - [x] Portable JSON export/import and local data reset.
-- [ ] Add migration and broader validation tests.
+- Migration support is deferred; new profile collections default to empty in the current schema version.
 
 ## Phase 2 — Master profile (foundation delivered)
 - [x] Contact details, summary, roles with reusable achievements, education, skills, languages.
-- [ ] Add certifications, projects, publications, awards, and custom sections.
+- [x] Add certifications, projects, publications, awards, and custom sections.
 
 ## Phase 3 — CV editor (in progress)
 - [x] Multiple CV versions, template selection, live document preview, print export.
@@ -45,6 +45,6 @@
 - [ ] E2E coverage, import parsers, 600 visual/profile combinations, accessibility audit, browser-based export tests.
 
 ## Risks / limits
-- Print-to-PDF depends on browser print behavior and fonts; no browser/runtime is installed in the current implementation environment, so build and visual verification are pending.
+- Print-to-PDF depends on browser print behavior and fonts; browser-based visual and export verification remains pending.
 - PDF pagination fidelity requires browser-based regression work; DOCX styling is currently a semantic, single-column document and does not mirror every template layout.
 - Job matching is intentionally not represented as AI; external AI must be opt-in with a review-before-send flow.

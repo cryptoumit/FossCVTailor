@@ -9,7 +9,7 @@ Install Node.js 20+ and npm, then run `npm install`, `npm run dev`. Use `npm run
 ## Current functionality
 
 - Private browser storage using IndexedDB, with autosaving profile and document records.
-- Master profile editing for contact details, summaries, experience and achievement libraries, education, skills, and languages.
+- Master profile editing for contact details, summaries, experience and achievement libraries, education, skills, languages, certifications, projects, publications, awards, and custom sections.
 - Multiple CV versions, template selection, preview, and browser print-to-PDF.
 - Editable DOCX export for CVs and cover letter drafts.
 - 50 distinct declarative template definitions across eight categories, with search and ATS classifications.
