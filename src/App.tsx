@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { CSSProperties, Dispatch, SetStateAction } from 'react';
 import { Activity, ArrowDownToLine, ArrowUpFromLine, BriefcaseBusiness, Check, ChevronDown, CircleHelp, FilePlus2, FileText, FolderHeart, LayoutDashboard, Plus, Search, Settings2, Sparkles, Trash2, UserRound } from 'lucide-react';
-import { emptyProfile, initialData, makeId, type AppData, type Application, type Experience } from './model/schema';
+import { initialData, makeId, type AppData, type Application, type Experience } from './model/schema';
 import { templates, type Template } from './model/templates';
 import { clearWorkspace, downloadBackup, loadWorkspace, parseBackup, saveWorkspace } from './storage/repository';
 import { exportCvDocx, exportLetterDocx } from './storage/docx';
