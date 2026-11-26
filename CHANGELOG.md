@@ -1,3 +1,6 @@
+## Readable workspace typography
+- Applied the readable UI type scale and muted-text contrast to the rest of the workspace (navigation, headings, CV builder side panel, templates, applications tracker, inputs and footer); CV document and print typography are unchanged.
+
 ## Editor bug fixes
 - Profile edits now target the selected CV version consistently; the editor offers a direct return to that CV and reflects the selected profile’s experience and completeness.
 - Skills and languages accept comma-separated typing without removing the in-progress comma; achievement edits preserve IDs and selection state.

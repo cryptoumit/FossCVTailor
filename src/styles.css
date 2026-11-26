@@ -14,3 +14,14 @@
 .profile-meter li.done{color:#28704b}.theme-dark .profile-meter li.done{color:#a7e0b7}
 .theme-dark .tip-card{color:#d6eadb}.theme-dark .tip-card p{color:#c0d2c5}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Extend the readable type scale to the rest of the workspace chrome (#4). CV document, template thumbnail and print styles are intentionally untouched. */
+.field input,.field textarea,.template-controls select,.tracker-controls select,.heading-buttons select,.search-box input{font-size:var(--ui-body)}
+.field,.field small,.check-label,.hint,.text-link,.save-state,.welcome-panel p,.empty-state p,.empty-small p,.empty-small>b,.privacy-card p,.user-chip,.recent-row small,.application-row small,.selected-template small,.preview-toolbar small,.small-note,.results-count,.template-topline,.ats-note,.footer,.company-cell input,.url-input,.date-input,.status-select,.notes-field,.notes-field textarea{font-size:var(--ui-small)}
+.eyebrow,.rail-label,.brand small,.user-chip small,.welcome-kicker,.stat-card>div span,.step-tag,.role-index,.status-pill,.template-facts span,.table-head,.mini-button,.mini-tags span,.privacy-card b,.recent-row b,.application-row b,.selected-template b,.preview-toolbar b{font-size:var(--ui-label)}
+.panel-title p,.check-label,.hint,.save-state,.welcome-panel p,.empty-state p,.recent-row small,.application-row small,.selected-template small,.preview-toolbar small,.results-count,.template-topline,.notes-field,.footer,.eyebrow,.rail-label,.brand small,.stat-card>div span,.table-head{color:var(--ui-muted)}
+.button{font-size:var(--ui-label)}
+.theme-dark .nav-item{color:#b9c4bd}
+.theme-dark .field{color:#c3cec7}
+.theme-dark .button.secondary{color:#d3ddd6;border-color:#4a5a51}
+.theme-dark .template-facts span{background:#2a3731;color:#c3cec7}
