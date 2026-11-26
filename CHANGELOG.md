@@ -1,5 +1,8 @@
 # Changelog
 
+## GitHub issue templates
+- Added structured bug report and feature request forms with reminders not to post private CV or workspace data.
+
 ## Theme defaults
 - Set dark mode as the default for new workspaces and replaced the top-right letter avatar with a moon/sun theme toggle.
 
