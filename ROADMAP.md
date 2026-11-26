@@ -4,7 +4,7 @@
 - [x] Inspect repository; it contained only LICENSE and a short README.
 - [x] Establish architecture, data model direction, risk notes, and build plan.
 
-## Phase 1 — Foundation (in progress)
+## Phase 1 — Foundation (complete)
 - [x] React + TypeScript + Vite application shell and design system.
 - [x] GitHub Pages base path and Actions deployment workflow.
 - [x] Validated data model and IndexedDB autosave repository.
@@ -15,13 +15,13 @@
 - [x] Contact details, summary, roles with reusable achievements, education, skills, languages.
 - [x] Add certifications, projects, publications, awards, and custom sections.
 
-## Phase 3 — CV editor (in progress)
+## Phase 3 — CV editor (complete)
 - [x] Multiple CV versions, template selection, live document preview, print export.
 - [x] Edit the selected CV version from the profile editor, with autosave, stable achievement state, and comma-friendly list fields.
 - [x] Import a validated JSON backup directly from the profile editor.
-- [ ] Section visibility/order, version snapshots, undo/redo, design controls.
+- [x] Per-version section visibility and ordering, named snapshots, session undo/redo, and design controls.
 
-## Phase 4 — Document engine
+## Phase 4 — Document engine (next)
 - [x] Print stylesheet, A4/Letter page sizing and selectable text.
 - [x] Editable DOCX generation for CVs and letters.
 - [ ] Page-level preview controls, rendering automation and pagination QA.

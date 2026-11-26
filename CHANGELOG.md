@@ -1,3 +1,8 @@
+## CV editor controls
+- Added per-version section visibility and ordering, with the same settings applied to preview, print/PDF, and DOCX exports.
+- Added named profile/template/section snapshots and session-local undo/redo for CV edits.
+- Added per-version accent color, font, and spacing controls.
+
 ## Readable workspace typography
 - Applied the readable UI type scale and muted-text contrast to the rest of the workspace (navigation, headings, CV builder side panel, templates, applications tracker, inputs and footer); CV document and print typography are unchanged.
 

@@ -20,3 +20,7 @@ The app has no AI dependency and sends no CV data out of the browser. Any future
 
 ## Additive profile sections
 Certifications, projects, publications, awards, and custom sections are optional arrays with empty defaults. Existing schema-version-1 profile records remain valid without a data migration. Add migration logic only if a future incompatible data-format change requires it.
+
+
+## Additive CV editor settings
+CV versions now store section order and visibility, optional design overrides, and named snapshots. These fields are additive and default when missing, so existing schema-version-1 workspaces and backups remain valid without a format migration. Undo/redo history is session-local and is not included in backups.
