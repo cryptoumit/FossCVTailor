@@ -2,7 +2,7 @@
 
 ## Project
 
-FossCVTailor is a local-first CV and cover letter workspace. The browser is the default trust boundary: user content must stay local unless a future feature explicitly asks for informed consent before sending it elsewhere.
+CVTailor is a local-first CV and cover letter workspace. The browser is the default trust boundary: user content must stay local unless a future feature explicitly asks for informed consent before sending it elsewhere.
 
 ## Setup and checks
 

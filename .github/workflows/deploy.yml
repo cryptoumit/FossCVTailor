@@ -1,4 +1,4 @@
-name: Deploy FossCVTailor to GitHub Pages
+name: Deploy CVTailor to GitHub Pages
 
 on:
   push:

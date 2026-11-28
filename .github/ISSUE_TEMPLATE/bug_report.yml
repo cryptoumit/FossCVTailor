@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible problem with FossCVTailor.
+description: Report a reproducible problem with CVTailor.
 title: "[Bug]: "
 labels: bug
 type: bug
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve FossCVTailor. Issues are public. Do not include your CV, cover letter, contact details, employer information, or workspace backups. Share only the minimum information needed to reproduce the problem.
+        Thanks for helping improve CVTailor. Issues are public. Do not include your CV, cover letter, contact details, employer information, or workspace backups. Share only the minimum information needed to reproduce the problem.
   - type: textarea
     id: summary
     attributes:

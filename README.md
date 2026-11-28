@@ -1,10 +1,10 @@
-# FossCVTailor
+# CVTailor
 
 A free, local-first workspace for building CVs, cover letters, and a job search pipeline. No account, subscription, analytics, or remote service is required.
 
 ## View online
 
-FossCVTailor is available on [GitHub Pages](https://cryptoumit.github.io/FossCVTailor/).
+CVTailor is available on [GitHub Pages](https://cryptoumit.github.io/CVTailor/).
 
 ## Run locally
 
@@ -38,7 +38,7 @@ All user content stays in this browser by default. Clearing browser storage remo
 
 
 ### Editing and imports
-The profile editor edits the selected CV version when one is active, and changes autosave locally. Use **Back to CV** to return to its preview. Skills and languages accept comma-separated input. A validated FossCVTailor JSON backup can also be imported from the profile editor; restoring replaces the current local workspace after confirmation.
+The profile editor edits the selected CV version when one is active, and changes autosave locally. Use **Back to CV** to return to its preview. Skills and languages accept comma-separated input. A validated CVTailor JSON backup can also be imported from the profile editor; restoring replaces the current local workspace after confirmation.
 
 CV versions can customize section visibility and order, accent color, typeface, and spacing. Named snapshots save and restore a version’s profile and document settings. Undo and redo are available for edits during the current session.
 
